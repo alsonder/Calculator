@@ -4,7 +4,7 @@ class Main {
     public static void main(String[] args) {
 
         char operator;
-        Double number1, number2, result;
+        double number1, number2, result;
 
         // create an object of Scanner class
         Scanner input = new Scanner(System.in);
@@ -23,32 +23,29 @@ class Main {
         switch (operator) {
 
             // performs addition between numbers
-            case '*':
+            case '+' -> {
                 result = number1 + number2;
                 System.out.println(number1 + " + " + number2 + " = " + result);
-                break;
+            }
 
             // performs subtraction between numbers
-            case '-':
+            case '-' -> {
                 result = number1 - number2;
                 System.out.println(number1 + " - " + number2 + " = " + result);
-                break;
+            }
 
             // performs multiplication between numbers
-            case '*':
+            case '*' -> {
                 result = number1 * number2;
                 System.out.println(number1 + " * " + number2 + " = " + result);
-                break;
+            }
 
             // performs division between numbers
-            case '/':
+            case '/' -> {
                 result = number1 / number2;
                 System.out.println(number1 + " / " + number2 + " = " + result);
-                break;
-
-            default:
-                System.out.println("Invalid operator!");
-                break;
+            }
+            default -> System.out.println("Invalid operator!");
         }
 
         input.close();
